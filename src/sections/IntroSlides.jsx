@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Heading, Slide, SlideSet, Text } from "spectacle";
+import { Heading, Slide, SlideSet, Text, Link } from "spectacle";
 
 import NoteList from "../elements/NoteList";
 
@@ -31,26 +31,61 @@ export default (
       />
     </Slide>
 
-    <Slide>
-      <Heading fit size={1}>
-        Project 1: Animation
+    <Slide bgColor="tertiary">
+      <Heading fit size={1} textColor="primary">
+        <Link
+          textColor="primary"
+          href="https://snap.berkeley.edu/snapsource/snap.html#present:Username=derek%20dung&ProjectName=Ghostrider"
+        >
+          One Month In
+        </Link>
       </Heading>
-
-      <Text>
-        <a href="https://snap.berkeley.edu/snapsource/snap.html#present:Username=derek%20dung&ProjectName=Ghostrider">
-          Ghostrider
-        </a>
-      </Text>
-
-      <Text>
-        <a href="https://snap.berkeley.edu/snapsource/snap.html#present:Username=will-wow&ProjectName=Hangman">
-          Hangman
-        </a>
-      </Text>
 
       <NoteList
         notes={["Here's an example from a student", "1 month in", "dope"]}
       />
+    </Slide>
+
+    <Slide>
+      <Heading fit size={1}>
+        <Link
+          textColor="tertiary"
+          href="https://snap.berkeley.edu/snapsource/snap.html#present:Username=will-wow&ProjectName=Billy"
+        >
+          Hi Billy!
+        </Link>
+      </Heading>
+
+      <NoteList notes={["Here's one I did to prepare for a later lesson"]} />
+    </Slide>
+
+    <Slide bgColor="tertiary">
+      <Heading fit size={1}>
+        <Link
+          textColor="primary"
+          href="https://snap.berkeley.edu/snapsource/snap.html#present:Username=will-wow&ProjectName=Hangman"
+        >
+          Hangman
+        </Link>
+      </Heading>
+
+      <NoteList
+        notes={[
+          "finally, here's one i did as summer homework",
+          "functions",
+          "yes, you can make reduce",
+          "yes, I did",
+          "even unit tests"
+        ]}
+      />
+    </Slide>
+
+    <Slide bgSize="contain" bgRepeat="no-repeat" bgImage="./img/billy.png">
+      <Heading size={1}>
+        Thanks!
+      </Heading>
+
+      <NoteList notes={["say thanks, billy!"]} />
     </Slide>
   </SlideSet>
 );
